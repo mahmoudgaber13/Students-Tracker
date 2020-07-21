@@ -1,0 +1,5 @@
+How to use 
+
+1-User has to enter governorates, neighbourhoods, and Fields before adding new Student.
+2-Selected neighbourhood for student must be in selected governorate for the same student.
+3-Delete button in student's index page deletes immediately without Confirmation (as per task needs) 

@@ -1,0 +1,64 @@
+﻿@model StudentsTracker.Student
+
+@{
+    ViewBag.Title = "Save";
+}
+
+<h2>Save</h2>
+
+<h3>Are you sure you want to Save this student?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            Field
+        </dt>
+
+        <dd>
+            @ViewBag.Field
+        </dd>
+
+        <dt>
+            Governorate
+        </dt>
+
+        <dd>
+            @ViewBag.Governorate
+        </dd>
+
+        <dt>
+            Neighborhood
+        </dt>
+
+        <dd>
+            @ViewBag.Neighborhood
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Save" class="btn btn-success" /> |
+    @Html.ActionLink("Back To List", "Create", new { id = @Model.ID }, new { @class = "btn btn-primary" })
+</div>
+    }
+</div>
